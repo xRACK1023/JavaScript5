@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>  
+        <title>Joseph Parrett</title> 
+        <script>
+            function getClothing() {
+            //input
+            var temp = document.getElementById("tempIn").value;
+
+            var getClothing;
+            if (temp <= 32) {
+                getClothing = "coat";
+            } else if (temp <= 55) {
+                getClothing = "Jacket";
+            }
+            else {
+                getClothing = "Sweater";
+            }     
+
+            //output
+                document.getElementById("showClothing").innerHTML = "Today you should wear a " + getClothing + ".";
+            }
+        </script>
+    </head>
+	<body>
+        <h1>josephParrett</h1>
+        <p>Temperature <input id="tempIn" type="number" size="5"></p>
+        <button type="button" onclick="getClothing()">Submit</button>
+        <p id="showClothing"></p>
+	</body>	
