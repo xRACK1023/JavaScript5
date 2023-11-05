@@ -4,26 +4,29 @@
     <head>  
         <title>Joseph Parrett</title> 
         <script>
-            function calcClass() {
-                
-            var income = document.getElementById("income").value;
-            
+            function getClass() {
+
+            var income = document.getElementById("getIncome").value;
+
             var incomeLevel = "";
             if (income <= 29000) {
                 incomeLevel = "Poor";
-            } else if (incomeLevel <= 350000) {
+            } else if (income < 350000) {
                 incomeLevel = "Middle Class";
             } else {
                 incomeLevel = "Rich";
             }
 
-            document.getElementById("showIncomeLevel").innerHTML = "Your income level is: " + incomeLevel + ".";
+            document.getElementById("showClass").innerHTML = "Your income level is: " + incomeLevel + ".";
             }
         </script>
     </head>
 	<body>
         <h1>josephParrett</h1>
-        <p>Annual Income: <input id="income" size="6"></p>
-        <button type="button" onclick="calcClass()">Submit</button>
-        <p id="showIncomeLevel"></p>
-    </body>	
+        
+        <p>Annual Income <input id="getIncome" size="6"></p>
+        <button type="button" onclick="getClass()">Submit</button>
+
+        <p id="showClass"></p>
+	</body>
+</html>

@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-
 <html>
-    <head>  
-        <title>Joseph Parrett</title> 
+    <head>
+        <title>Joseph Parrett</title>
         <script>
-            function calPriceGrade() {
-            //input
-            var weight = document.getElementById("weightIn").value;
-            //process
-            
-            var showPrice;
+            function calcRating() {
+      
+            var weight = document.getElementById("testWeight").value;
 
+            var price = "";
             if (weight < 54) {
                 price = 5.35;
-               // grade = "No. 3";
+                grade = "No. 3"
             } else if (weight <= 56) {
                 price = 5.43;
-               // grade = "No. 2";
+                grade = "No. 2";
             } else {
                 price = 5.50;
-               // grade = "No. 1";
+                grade = "No. 1"
             }
-            //output
-                document.getElementById("showPrice").innerHTML = "The price is: $" + price.tofixed(2);
-              //  document.getElementById("showprice").innerHTML = "The grade is: " + grade;
+
+            document.getElementById("outRating").innerHTML="The price is: $" + price.toFixed(2);
+            document.getElementById("outGrade").innerHTML="The grade is " + grade;
             }
         </script>
     </head>
-	<body>
+    <body>
+
         <h1>josephParrett</h1>
-        <p>Test weight: <input id="weightIn" type="number" size="5"></p>
-        <button type="button" onclick="calPriceGrade()">Calculate</button>
-        <p id="showPrice"></p>
-    
-    </body>	
+
+        <p>Test Weight: <input id="testWeight" type="number" size="5"></p>
+        <button type="button" onclick="calcRating()">Submit</button>
+
+        <p id="outRating"></p>
+        <p id="outGrade"></p>
+    </body>
+</html>
